@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/classes-6b21b87c2965ac81d06da0e543590b056b7a3c70.jar" />
+    </item>
+    <item
+        jar="/Users/himsun/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/support-annotations-23.0.0-63e3423b663c7964c8537b3ca59aa9e3bda683bd.jar" />
+    </item>
+    <item
+        jar="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="bb0ac3f3ee2d71854501cc28e52cc84a20209b41">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/classes-d20fa05f7c41cb02351a67a119828185bd1f2920.jar" />
+    </item>
+    <item
+        jar="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/exploded-aar/com.android.support/support-v4/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-aab10ca2db292e856129c96123165cce749722d4.jar" />
+    </item>
+    <item
+        jar="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/exploded-aar/com.android.support/cardview-v7/23.0.0/jars/classes.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="1ccbc26be2c465c622a48310e8092241b01abe80">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/classes-95682dabb7ce7d31d15f070d401f9ff88ab66df1.jar" />
+    </item>
+    <item
+        jar="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/exploded-aar/com.android.support/support-v13/23.0.0/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        revision="23.0.0"
+        sha1="5d4bccb885c8a89d066ecb6c4addb553a99a79a2">
+        <dex dex="/Users/himsun/mongmi_android/SwipeRefreshListFragment/Application/build/intermediates/pre-dexed/debug/internal_impl-23.0.0-5d31593834a44e7776bbbb10b5277f937eba7824.jar" />
+    </item>
+
+</items>

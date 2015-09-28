@@ -2,13 +2,16 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.kayadami.himsun.mongmi" >
 
+    <!-- To access Google+ APIs: -->
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Loginpage"
+            android:name=".Login"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,8 +20,20 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".gamepage"
-            android:label="@string/title_activity_gamepage" >
+            android:name=".Keyword"
+            android:label="@string/title_activity_keyword" >
+        </activity>
+        <activity
+            android:name=".Upload_keyword"
+            android:label="@string/title_activity_upload_keyword" >
+        </activity>
+        <activity
+            android:name=".Today_list"
+            android:label="@string/title_activity_today_list" >
+        </activity>
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/title_activity_main" >
         </activity>
     </application>
 

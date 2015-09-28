@@ -1,0 +1,172 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="fill_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    tools:context=".Today_keyword"
+    android:id="@+id/today_keyword_layout"
+
+    android:background="@mipmap/keyword_bg3x">
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView10"
+        android:src="@mipmap/mong_word3x"
+        android:baselineAlignBottom="false"
+        android:clickable="false"
+        android:layout_alignParentStart="false"
+
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="오늘의 키워드 미션!"
+        android:id="@+id/mongmi_say_text"
+        android:layout_alignTop="@+id/imageView10"
+        android:layout_centerHorizontal="true"
+        android:textSize="33dp"
+        android:layout_marginTop="18dp"
+        android:textColor="#000000" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="New Text"
+        android:id="@+id/mongmi_time_text"
+        android:layout_below="@+id/mongmi_say_text"
+        android:layout_centerHorizontal="true"
+        android:textSize="21dp"
+        android:textColor="#000000" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mission_keyword1_btn"
+        android:src="@mipmap/keyword_button_d2x"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="false"
+        android:layout_marginTop="240dp"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_alignParentStart="false"
+        android:layout_marginLeft="100dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mission_keyword2_btn"
+        android:src="@mipmap/keyword_button_d2x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_below="@+id/mission_keyword1_btn"
+        android:layout_alignStart="@+id/mission_keyword1_btn"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/mission_keyword3_btn"
+        android:src="@mipmap/keyword_button_d2x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_below="@+id/mission_keyword2_btn"
+        android:layout_alignStart="@+id/mission_keyword2_btn"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView2"
+        android:src="@mipmap/present_icon1x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_alignTop="@+id/mission_keyword1_btn"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView"
+        android:src="@mipmap/present_icon1x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/mission_keyword2_btn" />
+
+    <ImageView
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:id="@+id/imageView3"
+        android:src="@mipmap/present_icon1x"
+        android:adjustViewBounds="true"
+        android:scaleType="fitCenter"
+        android:background="@null"
+        android:layout_alignParentStart="false"
+        android:layout_alignTop="@+id/mission_keyword3_btn" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="포카리스웨트"
+        android:id="@+id/mission_keyword1_text"
+        android:autoText="false"
+        android:textColor="#000000"
+        android:layout_alignParentStart="false"
+        android:layout_alignParentEnd="false"
+        android:layout_alignEnd="@id/mission_keyword1_btn"
+        android:layout_alignStart="@id/mission_keyword1_btn"
+        android:gravity="center"
+        android:layout_alignTop="@+id/mission_keyword1_btn"
+        android:textSize="33dp"
+        android:layout_marginTop="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기싱꿍꼬또"
+        android:id="@+id/mission_keyword2_text"
+        android:layout_alignStart="@id/mission_keyword1_btn"
+        android:layout_marginTop="20dp"
+        android:textColor="#000000"
+        android:layout_alignEnd="@id/mission_keyword1_btn"
+        android:layout_alignTop="@+id/mission_keyword2_btn"
+        android:gravity="center"
+        android:textSize="33dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="쓰레기"
+        android:id="@+id/mission_keyword3_text"
+        android:textColor="#000000"
+        android:textSize="33dp"
+        android:gravity="center"
+        android:layout_alignStart="@id/mission_keyword3_btn"
+        android:layout_alignEnd="@id/mission_keyword3_btn"
+        android:layout_alignTop="@+id/mission_keyword3_btn"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageView4"
+        android:src="@mipmap/cancel_icon1x"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true" />
+
+</RelativeLayout>
