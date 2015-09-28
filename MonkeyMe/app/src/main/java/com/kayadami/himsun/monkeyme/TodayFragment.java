@@ -84,35 +84,39 @@ public class TodayFragment extends Fragment implements  View.OnClickListener{
 
         TodayRankinglist1Fragment rankinglist1Fragment = new TodayRankinglist1Fragment();
 
-
         FragmentTransaction transaction =((FragmentActivity)getContext()).getSupportFragmentManager().beginTransaction();
-
-
 
         Log.d("img1","clickeddd");
         switch (v.getId())
         {
             case R.id.today_keyword1_imgview:
-               // getActivity(MainActivity).go
                 Log.d("Img1", "clicked");
-
 
                 bundle.putString("id", "keyword1");
                 rankinglist1Fragment.setArguments(bundle);
 
-                transaction.replace(R.id.mainLayout,rankinglist1Fragment);
-                transaction.addToBackStack(null);
-                transaction.commit();
-
                 break;
             case R.id.today_keyword2_imgview:
                 Log.d("Img2","clicked");
+
+                bundle.putString("id", "keyword2");
+                rankinglist1Fragment.setArguments(bundle);
                 break;
             case R.id.today_keyword3_imgview:
-                Log.d("Img3","clicked");
+                Log.d("Img3", "clicked");
+
+                bundle.putString("id", "keyword3");
+                rankinglist1Fragment.setArguments(bundle);
+
+                break;
+            default:
                 break;
 
         }
+
+        transaction.replace(R.id.mainLayout,rankinglist1Fragment);
+        transaction.addToBackStack(null);
+        transaction.commit();
     }
 /*
     @Override

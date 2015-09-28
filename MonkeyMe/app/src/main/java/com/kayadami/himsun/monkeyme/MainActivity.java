@@ -1,5 +1,6 @@
 package com.kayadami.himsun.monkeyme;
 
+import android.support.v4.app.FragmentActivity;
 import  android.support.v4.app.FragmentManager;
 import android.content.Context;
 import android.graphics.Typeface;
@@ -19,13 +20,10 @@ public class MainActivity extends AppCompatActivity {
 
     //FragmentManager fm = getFragmentManager();
 
-    FragmentTransaction transaction = getSupportFragmentManager().beginTransaction();
+    FragmentTransaction transaction=((FragmentActivity)this).getSupportFragmentManager().beginTransaction(); //= this.getSupportFragmentManager().beginTransaction();
 
-    MainActivityFragment mainFragment = new MainActivityFragment();
-    MenuFragment menuFragment = new MenuFragment();
     TodayFragment todayFragment = new TodayFragment();
     MissionFragment missionFragment = new MissionFragment();
-    MissionuploadFragment missionuploadFragment = new MissionuploadFragment();
 
     public static Typeface baemin_font;
 
@@ -42,7 +40,9 @@ public class MainActivity extends AppCompatActivity {
 
         Log.d("dd", "start");
 
-        transaction.add(R.id.mainLayout,todayFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.mainLayout, todayFragment).commit();
+
+//        transaction.add(R.id.mainLayout,todayFragment).commit();
         //getFragmentManager().beginTransaction().add(R.id.mainLayout, todayFragment).commit();
     }
 
@@ -53,9 +53,11 @@ public class MainActivity extends AppCompatActivity {
 
     public void onTodayClicked(View view)
     {
-        Log.d("click","imgClick");
+        Log.d("click", "imgClick");
 
-        transaction.replace(R.id.mainLayout,todayFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainLayout, todayFragment).addToBackStack(null).commit();
+
+//        transaction.replace(R.id.mainLayout,todayFragment).commit();
 
         /*
         fm.beginTransaction().replace(R.id.mainLayout,todayFragment).commit();
@@ -65,9 +67,11 @@ public class MainActivity extends AppCompatActivity {
     }
     public void onMissionClicked(View view)
     {
-        Log.d("click","imgClick");
+        Log.d("click", "imgClick");
 
-        transaction.replace(R.id.mainLayout,missionFragment).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.mainLayout, missionFragment).addToBackStack(null).commit();
+
+//        transaction.replace(R.id.mainLayout,missionFragment).commit();
         /*
         fm.beginTransaction().replace(R.id.mainLayout,missionFragment).commit();
         fm.beginTransaction().addToBackStack(null);
