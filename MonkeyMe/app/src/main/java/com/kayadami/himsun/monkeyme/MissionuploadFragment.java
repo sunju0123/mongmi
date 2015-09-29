@@ -1,5 +1,11 @@
 package com.kayadami.himsun.monkeyme;
 
+import android.database.Cursor;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
+import android.net.Uri;
+import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.content.Context;
 import android.content.res.Resources;
@@ -25,6 +31,7 @@ public class MissionuploadFragment extends Fragment implements View.OnClickListe
 
     TextView pagenametext;
 
+    ImageView thumbnailimg;
     ImageView keyword1img, keyword2img, keyword3img;
 
     EditText mongsang_comment_edittext;
@@ -41,6 +48,49 @@ public class MissionuploadFragment extends Fragment implements View.OnClickListe
 
 
         View view = getActivity().getLayoutInflater().inflate(R.layout.mission_upload, container, false);
+
+        thumbnailimg=(ImageView)view.findViewById(R.id.mission_upload_thumbnail_img);
+
+        Bundle args = getArguments();
+
+        String videoid = args.getString("videoid");
+        Long vid = Long.parseLong(videoid);
+
+//        Bitmap bitmap = ThumbnailUtils.createVideoThumbnail(videoid, MediaStore.Video.Thumbnails.MINI_KIND);
+
+//        Bitmap thumb = ThumbnailUtils.createVideoThumbnail(filePath, Thumbnails.MINI_KIND);
+
+
+
+        Uri video = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
+        String[] projection = new String[]{MediaStore.Video.Media._ID};
+        String where = MediaStore.Video.Media.DATA+"=?";
+        String[] whereArgs;// = new String[]{videoPath};
+        Cursor media = getActivity().getContentResolver().query(video, projection, where, whereArgs, null);
+
+        media.moveToFirst();
+        String videoId = media.getString(0);
+
+        Uri thumbnail = MediaStore.Video.Thumbnails.EXTERNAL_CONTENT_URI;
+        projection = new String[]{MediaStore.Video.Thumbnails.DATA};
+        where = MediaStore.Video.Thumbnails.VIDEO_ID+"=?";
+        whereArgs = new String[]{videoId};
+        Cursor thumb = getActivity().getContentResolver().query(thumbnail, projection, where, whereArgs, null);
+
+
+
+        /*
+        BitmapFactory.Options options = new BitmapFactory.Options();
+        options.inDither = false;
+        options.inPreferredConfig = Bitmap.Config.ARGB_8888;
+
+
+        Bitmap bitmapthumb= MediaStore.Video.Thumbnails.getThumbnail(getActivity().getContentResolver(), vid, MediaStore.Images.Thumbnails.MICRO_KIND, options);
+
+
+       thumbnailimg.setImageBitmap(bitmapthumb);
+*/
+
 
         //mongsang_comment_edittext = (EditText)view.findViewById(R.id.mongsang_commnet_edit);
         //mongsang_comment_edittext.requestFocus();
