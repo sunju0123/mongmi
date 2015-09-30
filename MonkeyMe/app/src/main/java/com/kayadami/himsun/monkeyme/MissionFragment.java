@@ -239,7 +239,7 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
 
 
 
-        bundle.putString("videoid", uri.getLastPathSegment());
+        bundle.putString("videoid", path);
 
 
 

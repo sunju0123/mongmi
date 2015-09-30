@@ -6,9 +6,8 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 /**
  * Created by himsun on 2015. 9. 28..
@@ -16,6 +15,9 @@ import org.w3c.dom.Text;
 public class TodayRankinglist1Fragment extends Fragment {
 
     final String TAG = "TodayRankinglist1";
+
+    private ListView userList;
+   // private ListView_Adapter adapter;
 
     TextView top;
 
@@ -31,7 +33,7 @@ public class TodayRankinglist1Fragment extends Fragment {
         Log.d(TAG, "onCreateView called");
 
 
-        View view = getActivity().getLayoutInflater().inflate(R.layout.today_ranking, container, false);
+        View view = getActivity().getLayoutInflater().inflate(R.layout.today_ranking1, container, false);
 
         top=(TextView)view.findViewById(R.id.today_ranking_topmenu);
 
