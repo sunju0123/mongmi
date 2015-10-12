@@ -16,36 +16,24 @@ import android.widget.VideoView;
 import com.kayadami.himsun.monkeyme.models.MongSangCard;
 import com.kayadami.himsun.monkeyme.R;
 import com.kayadami.himsun.monkeyme.activities.MainActivity;
+import com.kayadami.himsun.monkeyme.views.MongSangCardView;
 
 import java.util.ArrayList;
 
 /**
  * Created by himsun on 2015. 10. 5..
  */
-public class MongSangAdapter extends BaseAdapter implements View.OnClickListener
-
+public class MongSangAdapter extends BaseAdapter
 {
-
-   private RelativeLayout rl;
-    private MongSangCard mMongCard;
     private Context mContext;
 
     private ArrayList<MongSangCard> mMongSangList;
-
-    private ImageView usericon,thumbnail,likebtn;
-    private TextView username,date,rank,keyword,hanmadi,likesnum;
-    private VideoView videoview;
-    int likescnt=0;
 
     public MongSangAdapter(Context context)
     {
         super();
         mContext = context;
-        mMongSangList = new ArrayList<MongSangCard>();
-
-        videoview = new VideoView(mContext);
-        videoview.setLayoutParams(new ViewGroup.LayoutParams(300,300));
-
+        mMongSangList = new ArrayList<>();
     }
 
     @Override
@@ -67,78 +55,16 @@ public class MongSangAdapter extends BaseAdapter implements View.OnClickListener
     @Override
     public View getView(int position, View convertView,ViewGroup parent)
     {
+        MongSangCardView v;
 
-
-        View v = convertView;
-
-
-
-        if(v==null)
-        {
-            v=((LayoutInflater)mContext.getSystemService(Context.LAYOUT_INFLATER_SERVICE)).inflate(R.layout.list_card_layout,null);
+        if (convertView != null && convertView instanceof MongSangCardView) {
+            v = (MongSangCardView) convertView;
+        } else {
+            v = new MongSangCardView(mContext);
         }
 
-        usericon=(ImageView)v.findViewById(R.id.card_usericon_img);
-        username= (TextView) v.findViewById(R.id.card_username_text);
-        date=(TextView)v.findViewById(R.id.card_date_text);
-        rank=(TextView)v.findViewById(R.id.card_rank);
-        keyword=(TextView)v.findViewById(R.id.card_keyword);
-        hanmadi=(TextView)v.findViewById(R.id.card_hanmadi);
-        likesnum=(TextView)v.findViewById(R.id.card_likecount);
-        thumbnail=(ImageView)v.findViewById(R.id.card_thumbnail_img);
-        likebtn=(ImageView)v.findViewById(R.id.card_likebtn_img);
-    //    videoview=(VideoView)v.findViewById(R.id.card_videoview);
-
-        rl= (RelativeLayout) v.findViewById(R.id.card_relativelayout);
-
-        rank.setTypeface(MainActivity.baemin_font);
-        likesnum.setTypeface(MainActivity.baemin_font);
-
-
-        videoview.setVisibility(View.INVISIBLE);
-
-
-        mMongCard = getItem(position);
-
-
-        if(mMongCard!=null)
-        {
-            if(mMongCard.getUserIcon()!=null)
-            {
-                usericon.setImageDrawable(mMongCard.getUserIcon());
-            }
-            if(mMongCard.getCardThumbnail()!=null)
-            {
-                thumbnail.setImageDrawable(mMongCard.getCardThumbnail());
-            }
-
-            username.setText(mMongCard.getUserName());
-            date.setText(mMongCard.getCardDate());
-            rank.setText(mMongCard.getCardRanking());
-            keyword.setText(mMongCard.getKeyword());
-            hanmadi.setText(mMongCard.getHanmadi());
-
-
-            likescnt=mMongCard.getLikesCount();
-            likesnum.setText(String.valueOf(likescnt));
-            keyword.setTypeface(MainActivity.baemin_font);
-
- //           likesnum.setText(mMongCard.getLikesCount());
-
-            thumbnail.setTag(position);
-            likebtn.setTag(position);
-            videoview.setTag(position);
-
-
-
-           thumbnail.setOnClickListener(this);
-            likebtn.setOnClickListener(this);
-            videoview.setOnClickListener(this);
-
-        //    videoview.destroyDrawingCache();
-        }
-
-
+        MongSangCard card = getItem(position);
+        v.setCard(card);
 
         return v;
     }
@@ -147,115 +73,4 @@ public class MongSangAdapter extends BaseAdapter implements View.OnClickListener
     {
         mMongSangList.add(mongsangcard);
     }
-
-
-    @Override
-    public void onClick(View v) {
-
-
-//        int a = Integer.parseInt((String) v.getTag());
-//        MongSangCard mc = mMongSangList.get(a);
-
-      //  mMongSangList.getChile
-
-
-        switch (v.getId())
-        {
-            case R.id.card_usericon_img:
-                break;
-            case R.id.card_thumbnail_img:
-
-                Log.d("thumb", "clicked");
-
-             //   thumbnail.setVisibility(View.GONE);
-
-
-
-
-                videoview=new VideoView(mContext);
-
-                android.widget.FrameLayout.LayoutParams fl = new FrameLayout.LayoutParams(300, 300);
-
-                videoview.setLayoutParams(fl);
-
-
-//                videoview.setVisibility(View.VISIBLE);
-
-                String path = "/storage/sdcard0/DCIM/Camera"
-                        + "/VID_20151002_223214.mp4";
-
-                videoview.setVideoPath(path);
-
-                MediaController mediacontrol = new MediaController(mContext);
-                videoview.setMediaController(mediacontrol);
-                videoview.requestFocus();
-
-                //     videoview.setOnPreparedListener(this);
-                videoview.seekTo(0);
-               videoview.start();
-
-                rl.addView(videoview);
-
-                break;
-            case R.id.card_likebtn_img:
-                Log.d("likecnt", String.valueOf(likescnt + 1));
-                likescnt++;
-                mMongCard.setLikesCount(likescnt);
-
-               likesnum.setText(String.valueOf(likescnt));
-                break;
-
-            /*
-            case R.id.card_videoview:
-
-                Log.d("video", "clicked");
-
-
-                break;*/
-        }
-
-    }
-
-    /*
-    @Override
-    public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
-        switch (v.getId())
-        {
-            case R.id.card_usericon_img:
-                break;
-            case R.id.card_thumbnail_img:
-
-                Log.d("thumb", "clicked");
-
-                //     thumbnail.setVisibility(View.GONE);
-                videoview.setVisibility(View.VISIBLE);
-
-                String path = "/storage/sdcard0/DCIM/Camera"
-                        + "/VID_20151002_223214.mp4";
-
-                videoview.setVideoPath(path);
-
-                MediaController mediacontrol = new MediaController(mContext);
-                videoview.setMediaController(mediacontrol);
-                videoview.requestFocus();
-
-                //     videoview.setOnPreparedListener(this);
-                videoview.seekTo(0);
-                videoview.start();
-
-                break;
-            case R.id.card_likebtn_img:
-                Log.d("likecnt", String.valueOf(likescnt + 1));
-                likescnt++;
-
-                likesnum.setText(String.valueOf(likescnt));
-                break;
-            case R.id.card_videoview:
-
-                Log.d("video", "clicked");
-
-
-                break;
-        }
-    }*/
 }

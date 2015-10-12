@@ -85,10 +85,8 @@ public class TodayFragment extends Fragment implements  View.OnClickListener{
         ArrayList<String> keywordset =new ArrayList<String>();
 
 
-        JSONObject jsonobj=new JSONObject();
-        jsonobj.
-
-
+//        JSONObject jsonobj=new JSONObject();
+//        jsonobj.
 
         DownThread th = new DownThread("http://naver.com");
         th.start();

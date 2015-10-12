@@ -16,7 +16,7 @@ public class MongSangCard {
 
     private int viewCount, comment, likesCount;
 
-    MongSangCard(Drawable userIcon, String userName, String cardDate, String cardRanking,
+    public MongSangCard(Drawable userIcon, String userName, String cardDate, String cardRanking,
                  Drawable cardThumbnail, String keyword, String hanmadi,
                  int viewCount, int comment, int likesCount, Uri videoUri) {
         this.userIcon = userIcon;
