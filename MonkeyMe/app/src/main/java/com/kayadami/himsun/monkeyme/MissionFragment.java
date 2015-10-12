@@ -209,9 +209,9 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
 
-        /*ㄹ
+
         if(data==null)
-            return;*/
+            return;
 
         getVideoInfo(data.getData());
 

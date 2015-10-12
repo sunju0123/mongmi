@@ -18,6 +18,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import org.apache.http.params.HttpParams;
+import org.json.JSONObject;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -95,6 +96,14 @@ public class TodayFragment extends Fragment implements  View.OnClickListener{
         ArrayList<String> keywordset =new ArrayList<String>();
 
 
+        JSONObject jsonobj=new JSONObject();
+        jsonobj.
+
+
+
+        DownThread th = new DownThread("http://naver.com");
+        th.start();
+
         /*
         오늘의 키워드랑 영상수 받아와서 찍기
          */
@@ -116,6 +125,11 @@ public class TodayFragment extends Fragment implements  View.OnClickListener{
         TodayRankinglist1Fragment rankinglist1Fragment = new TodayRankinglist1Fragment();
 
         FragmentTransaction transaction =((FragmentActivity)getContext()).getSupportFragmentManager().beginTransaction();
+
+
+     //   getContext().setProgressBarIndeterminateVisibility(true);
+        // 스레드 생성 후 시작
+
 
         Log.d("img1", "clickeddd");
         switch (v.getId())
