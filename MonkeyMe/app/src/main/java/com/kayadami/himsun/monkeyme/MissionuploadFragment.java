@@ -1,16 +1,9 @@
 package com.kayadami.himsun.monkeyme;
 
-import android.content.ContentResolver;
-import android.database.Cursor;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.media.MediaMetadataRetriever;
-import android.media.ThumbnailUtils;
-import android.net.Uri;
-import android.provider.MediaStore;
 import android.support.v4.app.Fragment;
 import android.content.Context;
-import android.content.res.Resources;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
@@ -23,6 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.w3c.dom.Text;
+
 
 /**
  * Created by himsun on 2015. 9. 23..
@@ -31,7 +26,7 @@ import android.widget.TextView;
 public class MissionuploadFragment extends Fragment implements View.OnClickListener {
 
     final String TAG = "MissionUploadFragment";
-    TextView keyword1, keyword2, keyword3;
+    TextView top_text;
 
     ImageView thumbnailimg;
     ImageView back_btn, upload_btn;
@@ -57,10 +52,14 @@ public class MissionuploadFragment extends Fragment implements View.OnClickListe
 
         thumbnailimg=(ImageView)view.findViewById(R.id.mission_upload_thumbnail_img);
         mongsang_comment_edittext = (EditText)view.findViewById(R.id.mongsang_commnet_edit);
+        top_text=(TextView)view.findViewById(R.id.mission_upload_top_text);
 
 
         back_btn.setOnClickListener(this);
         upload_btn.setOnClickListener(this);
+
+        mongsang_comment_edittext.setTypeface(MainActivity.baemin_font);
+        top_text.setTypeface(MainActivity.baemin_font);
 
 
 

@@ -1,56 +1,58 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".Today_Ranking"
-    android:id="@+id/today_ranking_layout"
-    >
+    android:id="@+id/today_ranking_layout">
 
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="오늘의 몽상"
-        android:id="@+id/today_ranking_topmenu"
+        android:id="@+id/today_ranking1_topmenu"
         android:layout_centerHorizontal="true"
         android:gravity="center"
         android:background="#07b3c5"
         android:paddingBottom="5dp"
         android:paddingTop="10dp"
-        android:textColor="#ffffff" />
+        android:textColor="#ffffff"
+        android:textSize="20sp" />
 
     <LinearLayout
-        android:orientation="horizontal"
+        android:id="@+id/rank1navitab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:id="@+id/linearLayout">
+        android:layout_below="@+id/today_ranking1_topmenu">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="랭킹순"
+            android:id="@+id/ranking1_rankbtn"
+            android:layout_below="@+id/today_ranking_topmenu"
+            android:background="#ffffff"
+            android:layout_weight="1"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:paddingRight="3dp" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="최신순"
+            android:id="@+id/ranking1_newbtn"
+            android:layout_weight="1"
+            android:textColor="#c0c5c6"
+            android:background="#ffffff"
+            android:textSize="20sp"
+            android:paddingLeft="3dp" />
 
     </LinearLayout>
 
     <ListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/listView"
-        android:layout_below="@+id/imageView5"
-        android:layout_alignParentStart="true" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView5"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginStart="80dp"
-        android:layout_alignParentTop="false"
-        android:layout_alignParentStart="false"
-        android:layout_below="@+id/today_ranking_topmenu" />
-
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView6"
-        android:src="@mipmap/ic_launcher"
-        android:layout_marginEnd="80dp"
-        android:layout_alignParentTop="false"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_below="@+id/today_ranking_topmenu" />
+        android:id="@+id/today_ranking1_list"
+        android:layout_below="@+id/rank1navitab"
+        android:layout_marginBottom="60dp" />
 
 </RelativeLayout>

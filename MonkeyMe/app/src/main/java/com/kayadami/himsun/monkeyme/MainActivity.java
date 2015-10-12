@@ -1,5 +1,7 @@
 package com.kayadami.himsun.monkeyme;
 
+import android.graphics.drawable.Drawable;
+import android.media.Image;
 import android.support.v4.app.FragmentActivity;
 import  android.support.v4.app.FragmentManager;
 import android.content.Context;
@@ -12,7 +14,10 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import java.net.HttpURLConnection;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,6 +31,11 @@ public class MainActivity extends AppCompatActivity {
     MissionFragment missionFragment = new MissionFragment();
 
     public static Typeface baemin_font;
+    private ImageView todayimg,missionimg,rankingimg,meimg;
+    Drawable todayactive,todayinactive, missionactive, missioninactive, rankactive, rankinactive, meactive,meinactive;
+
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +47,20 @@ public class MainActivity extends AppCompatActivity {
         baemin_font = Typeface.createFromAsset(this.getAssets(),"fonts/BMHANNA.otf");
 
 
-
         Log.d("dd", "start");
 
+        todayimg=(ImageView)findViewById(R.id.tab_today_img);
+        missionimg=(ImageView)findViewById(R.id.tab_mission_img);
+        rankingimg=(ImageView)findViewById(R.id.tab_ranking_img);
+        meimg=(ImageView)findViewById(R.id.tab_mypage_img);
+
+        todayactive = getResources().getDrawable(R.mipmap.tab_banana_active3x);
+        todayinactive=getResources().getDrawable(R.mipmap.tab_banana_inactive3x);
+        missionactive = getResources().getDrawable(R.mipmap.tab_mission_active3x);
+        missioninactive=getResources().getDrawable(R.mipmap.tab_mission_inactive3x);
+
+
+        todayimg.setImageDrawable(todayactive);
         getSupportFragmentManager().beginTransaction().add(R.id.mainLayout, todayFragment).commit();
 
 //        transaction.add(R.id.mainLayout,todayFragment).commit();
@@ -55,6 +76,10 @@ public class MainActivity extends AppCompatActivity {
     {
         Log.d("click", "imgClick");
 
+
+        todayimg.setImageDrawable(todayactive);
+        missionimg.setImageDrawable(missioninactive);
+
         getSupportFragmentManager().beginTransaction().replace(R.id.mainLayout, todayFragment).addToBackStack(null).commit();
 
 //        transaction.replace(R.id.mainLayout,todayFragment).commit();
@@ -68,6 +93,9 @@ public class MainActivity extends AppCompatActivity {
     public void onMissionClicked(View view)
     {
         Log.d("click", "imgClick");
+
+        todayimg.setImageDrawable(todayinactive);
+        missionimg.setImageDrawable(missionactive);
 
         getSupportFragmentManager().beginTransaction().replace(R.id.mainLayout, missionFragment).addToBackStack(null).commit();
 

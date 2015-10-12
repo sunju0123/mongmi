@@ -87,37 +87,40 @@
         android:layout_marginTop="20dp" />
 
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/imageView2"
         android:src="@mipmap/present_icon1x"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:background="@null"
         android:layout_alignTop="@+id/mission_keyword1_btn"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="3dp" />
 
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/imageView"
         android:src="@mipmap/present_icon1x"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:background="@null"
         android:layout_alignParentStart="true"
-        android:layout_alignTop="@+id/mission_keyword2_btn" />
+        android:layout_alignTop="@+id/mission_keyword2_btn"
+        android:layout_marginTop="3dp" />
 
     <ImageView
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
         android:id="@+id/imageView3"
         android:src="@mipmap/present_icon1x"
         android:adjustViewBounds="true"
         android:scaleType="fitCenter"
         android:background="@null"
         android:layout_alignParentStart="false"
-        android:layout_alignTop="@+id/mission_keyword3_btn" />
+        android:layout_alignTop="@+id/mission_keyword3_btn"
+        android:layout_marginTop="3dp" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -162,9 +165,9 @@
         android:layout_marginTop="20dp" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/imageView4"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:id="@+id/mission_cancel_btn"
         android:src="@mipmap/cancel_icon1x"
         android:layout_alignParentRight="true"
         android:layout_alignParentTop="true" />

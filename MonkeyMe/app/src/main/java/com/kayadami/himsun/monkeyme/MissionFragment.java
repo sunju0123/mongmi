@@ -158,12 +158,22 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         Log.d("img1", "clickeddd");
+/*
+        switch(v.getId())
+        {
+            case R.id.mission_cancel_btn:
+                Log.d("cancel","clock");
+                FragmentTransaction transaction = ((FragmentActivity) getContext()).getSupportFragmentManager().beginTransaction();
 
+                FragmentManager fm= ((FragmentActivity)getContext()).getSupportFragmentManager();
+                fm.popBackStack();
 
-        //     MissionuploadFragment missionuploadFragment = new MissionuploadFragment();
-
+             //   transaction.commit();
+                break;
+        }
+*/
         Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 3);
+        intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 2);
         intent.putExtra(MediaStore.EXTRA_DURATION_LIMIT, 9);
 
         startActivityForResult(intent, 2);
@@ -191,7 +201,6 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
                     bundle.putString("id", "keyword3");
                     missionuploadFragment.setArguments(bundle);
                     break;
-
             }
 
       //  }
@@ -199,6 +208,11 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
 
     @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
+
+        /*ㄹ
+        if(data==null)
+            return;*/
+
         getVideoInfo(data.getData());
 
         FragmentTransaction transaction = ((FragmentActivity) getContext()).getSupportFragmentManager().beginTransaction();
@@ -222,6 +236,7 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
         String path = cursor.getString(cursor.getColumnIndex(MediaStore.MediaColumns.DATA));
         Log.d("path", path);
 
+
         /*
         Uri video = MediaStore.Video.Media.EXTERNAL_CONTENT_URI;
         String[] projection = new String[]{MediaStore.Video.Media._ID};
@@ -233,11 +248,7 @@ public class MissionFragment extends Fragment implements View.OnClickListener {
         String videoId = media.getString(0);
 
         Log.d("videoid",videoId);
-
-
 */
-
-
 
         bundle.putString("videoid", path);
 

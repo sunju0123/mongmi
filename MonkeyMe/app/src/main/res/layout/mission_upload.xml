@@ -8,7 +8,8 @@
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:weightSum="1">
 
         <RelativeLayout
             android:layout_width="fill_parent"
@@ -16,37 +17,46 @@
             android:background="#07b3c5">
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:id="@+id/mission_upload_backbtn"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/icon_back3x"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentLeft="true" />
+                android:layout_alignParentLeft="true"
+                android:layout_margin="5dp"
+                android:padding="3dp" />
 
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
                 android:id="@+id/mission_upload_btn"
-                android:src="@mipmap/ic_launcher"
+                android:src="@mipmap/icon_ok3x"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentRight="true" />
+                android:layout_alignParentRight="true"
+                android:layout_margin="5dp"
+                android:padding="1dp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="New Text"
-                android:id="@+id/textView3"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
+                android:text="몽상 한마디"
+                android:id="@+id/mission_upload_top_text"
+                android:layout_alignParentTop="false"
+                android:layout_centerInParent="true"
+                android:textColor="#ffffff"
+                android:textSize="20sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp" />
         </RelativeLayout>
 
         <ImageView
-            android:layout_width="317dp"
-            android:layout_height="317dp"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
             android:id="@+id/mission_upload_thumbnail_img"
             android:src="@mipmap/ic_launcher"
             android:layout_centerHorizontal="true"
-            android:layout_gravity="center_horizontal" />
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitXY" />
 
     </LinearLayout>
 
