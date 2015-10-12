@@ -1,6 +1,5 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.fragments;
 
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -13,8 +12,12 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.MediaController;
 import android.widget.TextView;
+
+import com.kayadami.himsun.monkeyme.adapters.MongSangAdapter;
+import com.kayadami.himsun.monkeyme.models.MongSangCard;
+import com.kayadami.himsun.monkeyme.R;
+import com.kayadami.himsun.monkeyme.activities.MainActivity;
 
 /**
  * Created by himsun on 2015. 9. 28..

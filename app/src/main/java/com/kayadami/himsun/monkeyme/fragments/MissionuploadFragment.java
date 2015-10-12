@@ -1,4 +1,4 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.fragments;
 
 import android.graphics.Bitmap;
 import android.media.MediaMetadataRetriever;
@@ -16,7 +16,8 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.kayadami.himsun.monkeyme.R;
+import com.kayadami.himsun.monkeyme.activities.MainActivity;
 
 
 /**

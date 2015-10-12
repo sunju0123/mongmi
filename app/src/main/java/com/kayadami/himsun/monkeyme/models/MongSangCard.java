@@ -1,4 +1,4 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.models;
 
 import android.graphics.drawable.Drawable;
 import android.net.Uri;

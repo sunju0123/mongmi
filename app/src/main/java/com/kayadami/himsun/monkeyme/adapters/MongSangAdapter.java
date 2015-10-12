@@ -1,21 +1,21 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.adapters;
 
 import android.content.Context;
-import android.media.MediaPlayer;
-import android.os.Environment;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.MediaController;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 import android.widget.VideoView;
+
+import com.kayadami.himsun.monkeyme.models.MongSangCard;
+import com.kayadami.himsun.monkeyme.R;
+import com.kayadami.himsun.monkeyme.activities.MainActivity;
 
 import java.util.ArrayList;
 

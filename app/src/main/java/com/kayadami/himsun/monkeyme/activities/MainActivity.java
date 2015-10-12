@@ -1,23 +1,20 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.activities;
 
 import android.graphics.drawable.Drawable;
-import android.media.Image;
 import android.support.v4.app.FragmentActivity;
-import  android.support.v4.app.FragmentManager;
-import android.content.Context;
 import android.graphics.Typeface;
 import android.net.Uri;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.net.HttpURLConnection;
+import com.kayadami.himsun.monkeyme.fragments.MissionFragment;
+import com.kayadami.himsun.monkeyme.R;
+import com.kayadami.himsun.monkeyme.fragments.TodayFragment;
 
 public class MainActivity extends AppCompatActivity {
 

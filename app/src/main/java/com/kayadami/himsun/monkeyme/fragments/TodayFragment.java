@@ -1,11 +1,6 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.fragments;
 
-import android.app.Activity;
-import android.content.Context;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
 import android.support.v4.app.Fragment;
-import android.graphics.Typeface;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
@@ -17,18 +12,12 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import org.apache.http.params.HttpParams;
+import com.kayadami.himsun.monkeyme.R;
+import com.kayadami.himsun.monkeyme.activities.MainActivity;
+import com.kayadami.himsun.monkeyme.networks.DownThread;
+
 import org.json.JSONObject;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.lang.reflect.Array;
-import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
-import java.net.URL;
 import java.util.ArrayList;
 
 /**

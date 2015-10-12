@@ -1,4 +1,4 @@
-package com.kayadami.himsun.monkeyme;
+package com.kayadami.himsun.monkeyme.networks;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
