@@ -11,7 +11,7 @@ import java.net.URL;
 /**
  * Created by himsun on 2015. 10. 12..
  */
-public class sendJsonDataToServer {
+public class JsonSender {
 
     static public String sendJsonDataToServer(String JsonMsg, String ServerURL)
     {
@@ -37,20 +37,10 @@ public class sendJsonDataToServer {
             os.write(JsonMsg.getBytes());
 
             os.flush();
-
-
         }
-        catch(MalformedURLException e)
-        {
-            ;
-        }
-        catch (IOException e) {
-            ;
-        }
-        catch (Exception e)
-        {
-            ;
-        }
+        catch (MalformedURLException e) {}
+        catch (IOException e) {}
+        catch (Exception e) {}
 
         return null;
     }

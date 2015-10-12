@@ -147,7 +147,7 @@ public class TodayRankinglist1Fragment extends Fragment implements View.OnClickL
                 MongSangCard mc= adapter.getItem(position);
 
 
-                int likescnt = mc.getM_likes_count();
+                int likescnt = mc.getLikesCount();
 
                 Log.d("likecnt", String.valueOf(likescnt + 1));
                 likescnt++;

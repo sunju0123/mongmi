@@ -3,88 +3,86 @@ package com.kayadami.himsun.monkeyme.models;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 
-import java.net.URI;
-
 /**
  * Created by himsun on 2015. 10. 1..
  */
 public class MongSangCard {
 
-    private Drawable m_user_icon;
-    private String m_user_name, m_card_date, m_card_ranking;
-    private Drawable m_card_thumbnail;
-    private String m_keyword, m_hanmadi;
-    private Uri m_videouri;
+    private Drawable userIcon;
+    private String userName, cardDate, cardRanking;
+    private Drawable cardThumbnail;
+    private String keyword, hanmadi;
+    private Uri videoUri;
 
-    private int m_view_count, m_comment, m_likes_count;
+    private int viewCount, comment, likesCount;
 
-    MongSangCard(Drawable user_icon, String user_name, String card_date, String card_ranking,
-                 Drawable card_thumbnail, String keyword, String hanmadi,
-                 int view_count, int comment, int likes_count, Uri videouri) {
-        m_user_icon = user_icon;
-        m_user_name = user_name;
-        m_card_date = card_date;
-        m_card_ranking = card_ranking;
+    MongSangCard(Drawable userIcon, String userName, String cardDate, String cardRanking,
+                 Drawable cardThumbnail, String keyword, String hanmadi,
+                 int viewCount, int comment, int likesCount, Uri videoUri) {
+        this.userIcon = userIcon;
+        this.userName = userName;
+        this.cardDate = cardDate;
+        this.cardRanking = cardRanking;
 
-        m_card_thumbnail = card_thumbnail;
+        this.cardThumbnail = cardThumbnail;
 
-        m_keyword = keyword;
-        m_hanmadi = hanmadi;
-        m_view_count = view_count;
-        m_comment = comment;
-        m_likes_count = likes_count;
+        this.keyword = keyword;
+        this.hanmadi = hanmadi;
+        this.viewCount = viewCount;
+        this.comment = comment;
+        this.likesCount = likesCount;
 
-        m_videouri = videouri;
+        this.videoUri = videoUri;
     }
 
-    public Drawable getM_user_icon() {
-        return m_user_icon;
+    public Drawable getUserIcon() {
+        return userIcon;
     }
 
-    public String getM_user_name() {
-        return m_user_name;
+    public String getUserName() {
+        return userName;
     }
 
-    public String getM_date() {
-        return m_card_date;
+    public String getCardDate() {
+        return cardDate;
     }
 
-    public String getM_ranking() {
-        return m_card_ranking;
+    public String getCardRanking() {
+        return cardRanking;
     }
 
-    public Drawable getM_thumbnail() {
-        return m_card_thumbnail;
+    public Drawable getCardThumbnail() {
+        return cardThumbnail;
     }
 
-    public String getM_keyword() {
-        return m_keyword;
+    public String getKeyword() {
+        return keyword;
     }
 
-    public String getM_hanmadi() {
-        return m_hanmadi;
+    public String getHanmadi() {
+        return hanmadi;
     }
 
-    public int getM_view_count() {
-        return m_view_count;
+    public int getViewCount() {
+        return viewCount;
     }
 
-    public int getM_comment() {
-        return m_comment;
+    public int getComment() {
+        return comment;
     }
 
-    public int getM_likes_count() {
-        return m_likes_count;
+    public int getLikesCount() {
+        return likesCount;
     }
 
-    public Uri getM_videouri() {
-        return m_videouri;
+    public Uri getVideoUri() {
+        return videoUri;
     }
 
 
-    public void setM_likes_count(int like)
+    public void setLikesCount(int like)
     {
-        m_likes_count=like;
+        likesCount = like;
     }
 
 }

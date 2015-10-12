@@ -103,27 +103,27 @@ public class MongSangAdapter extends BaseAdapter implements View.OnClickListener
 
         if(mMongCard!=null)
         {
-            if(mMongCard.getM_user_icon()!=null)
+            if(mMongCard.getUserIcon()!=null)
             {
-                usericon.setImageDrawable(mMongCard.getM_user_icon());
+                usericon.setImageDrawable(mMongCard.getUserIcon());
             }
-            if(mMongCard.getM_thumbnail()!=null)
+            if(mMongCard.getCardThumbnail()!=null)
             {
-                thumbnail.setImageDrawable(mMongCard.getM_thumbnail());
+                thumbnail.setImageDrawable(mMongCard.getCardThumbnail());
             }
 
-            username.setText(mMongCard.getM_user_name());
-            date.setText(mMongCard.getM_date());
-            rank.setText(mMongCard.getM_ranking());
-            keyword.setText(mMongCard.getM_keyword());
-            hanmadi.setText(mMongCard.getM_hanmadi());
+            username.setText(mMongCard.getUserName());
+            date.setText(mMongCard.getCardDate());
+            rank.setText(mMongCard.getCardRanking());
+            keyword.setText(mMongCard.getKeyword());
+            hanmadi.setText(mMongCard.getHanmadi());
 
 
-            likescnt=mMongCard.getM_likes_count();
+            likescnt=mMongCard.getLikesCount();
             likesnum.setText(String.valueOf(likescnt));
             keyword.setTypeface(MainActivity.baemin_font);
 
- //           likesnum.setText(mMongCard.getM_likes_count());
+ //           likesnum.setText(mMongCard.getLikesCount());
 
             thumbnail.setTag(position);
             likebtn.setTag(position);
@@ -200,7 +200,7 @@ public class MongSangAdapter extends BaseAdapter implements View.OnClickListener
             case R.id.card_likebtn_img:
                 Log.d("likecnt", String.valueOf(likescnt + 1));
                 likescnt++;
-                mMongCard.setM_likes_count(likescnt);
+                mMongCard.setLikesCount(likescnt);
 
                likesnum.setText(String.valueOf(likescnt));
                 break;
